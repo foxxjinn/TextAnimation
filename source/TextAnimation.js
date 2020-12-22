@@ -1,20 +1,26 @@
 ;(function(){
+
+
     
     function textAnimation(text) {
-        //text.style.visibility = "hidden"
-
+        text.style.visibility = "hidden"
         // text.style.visibility = "visible"
 
         let clonedTextNode = text.cloneNode(true)
 
+        const div = getDivParent(text)
+        console.log(text.getBoundingClientRect())
+        console.log(div.getBoundingClientRect())
+
         const bodyThickness = getBodyMaringAndPaddingTopAndLeft()
         clonedTextNode.style.visibility = "visible" // Temporary
-        clonedTextNode.style.display = 'relative'
+        clonedTextNode.style.position = 'absolute'
+        clonedTextNode.style.left = `${text.getBoundingClientRect().left}px`
         clonedTextNode.style.color = 'blue'
-    
-        const div = getDivParent(text)
-        console.log(div)
-        div.appendChild(clonedTextNode)
+
+        console.log(clonedTextNode.getBoundingClientRect())
+
+        text.parentElement.appendChild(clonedTextNode)
     }
 
     function getBodyMaringAndPaddingTopAndLeft() {

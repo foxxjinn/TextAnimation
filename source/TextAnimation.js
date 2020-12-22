@@ -16,6 +16,7 @@
         clonedTextNode.style.visibility = "visible" // Temporary
         clonedTextNode.style.position = 'absolute'
         clonedTextNode.style.left = `${text.getBoundingClientRect().left}px`
+        clonedTextNode.style.top = `${text.getBoundingClientRect().top}px`
         clonedTextNode.style.color = 'blue'
 
         console.log(clonedTextNode.getBoundingClientRect())

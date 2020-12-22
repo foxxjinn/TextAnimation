@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Animation</title>
+</head>
+<style>
+    div {
+        height: 80vh;
+    }
+</style>
+<body>
+    <div></div>
+    <div>
+        <h2>
+            Hello There, <span id="animate">What do you want?</span>  You don't know, do you?
+        </h2>
+    </div>
+</body>
+<script src="../source/TextAnimation.js"></script>
+<script>
+    const text = document.getElementById('animate')
+    textAnimation(text)
+</script>
+</html>
